@@ -1,8 +1,8 @@
-# FootballManager
+# ⚽ FootballManager: 
 
 This project is a Front (or Client Side) Web Application for managing the teams accordingly with the name and surname inputted by the user.
 
-## How to run:
+## ⚙️ How to run: 
 
 Just click in the following link: https://football-manager-front.vercel.app/
 
