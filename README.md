@@ -1,27 +1,26 @@
 # FootballManager
 
-This project is a Front (or Client Side) Web Application for managing the teams acordiling with the name and surname inputed by the user.
+This project is a Front (or Client Side) Web Application for managing the teams accordingly with the name and surname inputted by the user.
 
-## Development server
+## How to run:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Just click in the following link: https://football-manager-front.vercel.app/
 
-## Code scaffolding
+## If you chose to run from a Local server:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###### npm version used: 9.6.7
 
-## Build
+#### step 01: Clone the repository to your computer
+```
+git clone https://github.com/lucas-lima-dev/footballManager-front.git
+```
+#### step 02: Enter in directory of the local repository and install dependencies by openning the terminal and running the following script:
+```
+npm install
+```
+#### step 03: Open the terminal in the same directory and run the script bellow:
+```
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
