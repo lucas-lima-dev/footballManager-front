@@ -1,6 +1,4 @@
-<div class="header">
-  <h1>Bem Vindo ao melhor criador de times para sua partida de futebol!</h1>
-</div>
+<app-header></app-header>
 <div class="home-container">
   <div class="description">
     <p>
@@ -13,20 +11,23 @@
       <input
         type="text"
         [(ngModel)]="player.name"
-        placeholder="Nome do Jogador"
+        [placeholder]="isLoading ? 'Carregando...' : 'Nome do Jogador'"
         name="player"
       />
-      <button type="submit">Cadastrar Novo Jogador</button>
+      <button type="submit" [disabled]="isLoading">
+        Cadastrar Novo Jogador
+      </button>
     </form>
-
     <div class="styled-button">
-      <button (click)="getTeams()">Gerar Times</button>
-      <button (click)="deleteAll()">Deletar Todos</button>
+      <button (click)="getTeams()" [disabled]="isLoading">Gerar Times</button>
+      <button (click)="deleteAll()" [disabled]="isLoading">
+        Deletar Todos
+      </button>
     </div>
   </div>
 </div>
 <div class="teams-container">
-  <div  *ngFor="let team of teamsData | keyvalue">
+  <div *ngFor="let team of teamsData | keyvalue">
     <h2>{{ team.key }}</h2>
     <div class="team-card">
       <ul>
@@ -35,4 +36,4 @@
     </div>
   </div>
 </div>
-<div class="footer"><p>Developed by Lucas Lima</p></div>
+<app-footer></app-footer>

@@ -14,8 +14,13 @@ export class HomeComponent {
 
   teamsData: { [key: string]: string[] } = {};
 
+  isLoading: boolean = false;
+
+  
+
   onSubmit() {
     this.addNewPlayer();
+    this.isLoading = true;
   }
 
   getTeams(): void {
@@ -33,6 +38,7 @@ export class HomeComponent {
     this.homeService.addNewPlayer(this.player).subscribe(
       (data: Player) => {
         this.player = new Player();
+        this.isLoading = false;
       },
       (error) => {
         console.log(error);
