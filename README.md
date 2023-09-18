@@ -1,6 +1,6 @@
-# FootballManagerFront
+# FootballManager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+This project is a Front (or Client Side) Web Application for managing the teams acordiling with the name and surname inputed by the user.
 
 ## Development server
 
