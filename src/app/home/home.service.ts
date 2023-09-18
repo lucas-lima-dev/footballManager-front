@@ -4,18 +4,16 @@ import { Observable, Subject } from 'rxjs';
 import { Player } from './player';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HomeService {
-
-  constructor(private http:HttpClient) { };
+  constructor(private http: HttpClient) {}
 
   private playerModifiedSubject = new Subject<void>();
   playerModified$ = this.playerModifiedSubject.asObservable();
 
   private url = 'https://football-manager-pfz3.onrender.com';
-  // private url = 'http://localhost:8080';
-  
+
   public getTeams(): Observable<any> {
     return this.http.get<any>(`${this.url}/times`);
   }
