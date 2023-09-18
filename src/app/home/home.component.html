@@ -1,20 +1,38 @@
-<form (ngSubmit)="onSubmit()">
-  <input
-    type="text"
-    [(ngModel)]="player.name"
-    placeholder="Nome do Jogador"
-    name="player"
-  />
-  <button type="submit">Cadastrar Novo Jogador</button>
-</form>
+<div class="header">
+  <h1>Bem Vindo ao melhor criador de times para sua partida de futebol!</h1>
+</div>
+<div class="home-container">
+  <div class="description">
+    <p>
+      Aqui você pode cadastrar os jogadores que irão participar da partida e
+      gerar os times de forma aleatória.
+    </p>
+  </div>
+  <div class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <input
+        type="text"
+        [(ngModel)]="player.name"
+        placeholder="Nome do Jogador"
+        name="player"
+      />
+      <button type="submit">Cadastrar Novo Jogador</button>
+    </form>
 
-<div>
-  <button (click)="getTeams()">Gerar Times</button>
-  <button (click)="deleteAll()">Deletar Todos</button>
+    <div class="styled-button">
+      <button (click)="getTeams()">Gerar Times</button>
+      <button (click)="deleteAll()">Deletar Todos</button>
+    </div>
+  </div>
 </div>
-<div *ngFor="let team of teamsData | keyvalue">
-  <h2>{{ team.key }}</h2>
-  <ul>
-    <li *ngFor="let player of team.value">{{ player }}</li>
-  </ul>
+<div class="teams-container">
+  <div  *ngFor="let team of teamsData | keyvalue">
+    <h2>{{ team.key }}</h2>
+    <div class="team-card">
+      <ul>
+        <li *ngFor="let player of team.value">{{ player }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
+<div class="footer"><p>Developed by Lucas Lima</p></div>
