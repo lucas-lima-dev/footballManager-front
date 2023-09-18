@@ -44,8 +44,8 @@
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    border: 1px solid #226dc3;
-    background-color: #226dc3;
+    border: 1px solid #22c55e;
+    background-color: #22c55e;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
@@ -56,18 +56,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   button {
     width: auto;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    border: 1px solid #226dc3;
-    background-color: #226dc3;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
   }
 }
+
+.generate {
+  border: 1px solid #226dc3;
+  background-color: #226dc3;
+}
+
+.delete {
+  border: 1px solid #ef4544;
+  background-color: #ef4544;
+}
+
+
 
 .teams-container {
   display: flex;
