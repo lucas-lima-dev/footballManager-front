@@ -12,7 +12,7 @@ export class HomeService {
   private playerModifiedSubject = new Subject<void>();
   playerModified$ = this.playerModifiedSubject.asObservable();
 
-  private url = 'https://football-manager-best-dacf67d29d6d.herokuapp.com/';
+  private url = 'https://football-manager-best-dacf67d29d6d.herokuapp.com';
 
   public getTeams(): Observable<any> {
     return this.http.get<any>(`${this.url}/times`);
